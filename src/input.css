@@ -119,13 +119,46 @@ body{
 }
 
 .burgerMenu-backshadow{
-    background: #000000c9;
-    filter: blur(10px);
+    /* From https://css.glass */
+    background: rgba(19, 19, 19, 0.2);
+    /* border-radius: 16px; */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .lockScroll{
     overflow: hidden !important;
 }
+
+/* .burger-close{
+    border-radius: 11px;
+    box-shadow: 0px 4.196px 20.281px 0px rgba(70, 28, 28, 0.30);
+} */
+
+.burger-title{
+    color: #42304A;
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Ykbold;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px; /* 100% */
+}
+
+.burger-paragraph{
+    color: #42304A;
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Ykmedium;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 17.062px; /* 106.636% */
+}
+
 
 /*------------------------header--------------------------*/
 
@@ -163,7 +196,7 @@ body{
 
 /* ---------------------------nav-------------------------------- */
 
-
+/*-------------------------footer---------------------------*/
 
 .title-fot{
     color: var(--black-70, #4A4A4A);
@@ -191,3 +224,81 @@ body{
     font-weight: 700;
     line-height: 29px;
 }
+
+.point-card-title{
+    color: #6E6E6E;
+    text-align: center;
+    font-family: Ykmedium;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.card{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-lastCard{
+    border-radius: 100px 30px;
+    background: var(--Zhaket-CMS-p1-20, #E4E0EB);
+}
+
+.footer-card-item .item1{
+    display: flex;
+    padding: 4px 32px;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 30px 30px 4px 30px;
+    background: var(--Zhaket-CMS-p1-10, #F6F4F8);
+    color: var(--Zhaket-CMS-p1-100, #422872);
+    text-align: center;
+    font-family: Ykbold;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.footer-card-item .item2{
+    display: flex;
+    padding: 4px 32px;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 100px;
+    background: var(--Zhaket-CMS-p1-10, #F6F4F8);
+    color: var(--Zhaket-CMS-p1-100, #422872);
+    text-align: center;
+    font-family: Ykbold;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.footer-card-item .item3{
+    display: flex;
+    padding: 4px 32px;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 4px 30px 30px 30px;
+    background: var(--Zhaket-CMS-p1-10, #F6F4F8);
+    color: var(--Zhaket-CMS-p1-100, #422872);
+    text-align: center;
+    font-family: Ykbold;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+@media not all and (min-width: 640px) {
+    .point-card-title{
+        font-size: 10px;
+    }
+
+    .Description-fot{
+        line-height: 18px;
+    }
+}
+
+/*-------------------------footer---------------------------*/
