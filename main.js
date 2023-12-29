@@ -6,4 +6,10 @@ $(document).ready(function () {
     $('.burger-close').click(function () {
         $('.burgerMenu-backshadow').fadeOut();
     });
+
+
+
+    $('.container-ToUp').click(function() {
+        $('html, body').animate({ scrollTop: 0 }, 'slow');
+      });
 });
