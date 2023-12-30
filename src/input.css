@@ -181,7 +181,7 @@ body{
     background: var(--Zhaket-CMS-p1-80, #6E5B94);
 }
 
-.item{
+.itemnav{
     display: flex;
     width: 144px;
     height: 40px;
@@ -195,6 +195,95 @@ body{
 }
 
 /* ---------------------------nav-------------------------------- */
+
+
+
+
+
+
+
+/* -------------------------main------------------------------ */
+
+.owl-theme{
+    width: 100%;
+    height: 513px;
+    /* background-color: cadetblue; */
+}
+
+.owl-theme .item{
+    color: #fff;
+    font-size: 50px;
+    width: 100%;
+    height: 513px;
+    /* background-color: #422872; */
+}
+
+.owl-dots{
+    width: 112px;
+    height: 12px;
+    position: absolute;
+    bottom: 24px;
+    right: 569px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.owl-dots span{
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    background: #fff;
+}
+
+.owl-dots span .active{
+    width: 36px;
+    height: 12px;
+    border-radius: 22px;
+    background: #8840FF;
+    box-shadow: 0px 0px 9px 0px rgba(161, 103, 255, 0.49);
+}
+
+@media not all and (min-width: 640px){
+    .owl-theme .item{
+        height: auto;
+    }
+
+    .owl-dots{
+        right: 168px;
+        bottom: 12px;
+        width: 26px;
+        height: 4px;
+    }
+
+    .owl-dots span{
+        width: 4px;
+        height: 4px;
+    }
+
+    .card-shop{
+        border-radius: 4px 30px;
+    }
+}
+
+
+
+
+
+
+
+.card-shop{
+    border-radius: 20px 100px;
+    background-image: url('../img/image\ 12.png');
+}
+
+/* -------------------------main------------------------------ */
+
+
+
+
+
+
 
 /*-------------------------footer---------------------------*/
 
