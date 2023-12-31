@@ -21,26 +21,7 @@ $(document).ready(function () {
 // main
 
 $(document).ready(function () {
-    // $('.owl-carousel').owlCarousel({
-    //     items:1,
-    //     rtl:true,
-    //     loop:true,
-    //     margin:10,
-    //     // nav:true,
-    //     responsive:{
-    //         0:{
-    //             items:1
-    //         },
-    //         600:{
-    //             items:3
-    //         },
-    //         1000:{
-    //             items:5
-    //         }
-    //     }
-    // })
-
-    $(".owl-carousel").owlCarousel({
+    $("#owl-carousel1").owlCarousel({
         loop:true,
         rtl:true,
  
@@ -50,12 +31,29 @@ $(document).ready(function () {
         paginationSpeed : 400,
    
         items : 1, 
-        itemsDesktop : false,
-        itemsDesktopSmall : false,
-        itemsTablet: false,
-        itemsMobile : false
    
     });
+});
+
+$(document).ready(function () {
+    $('#owlcarousel-product').owlCarousel({
+        rtl:true,
+        loop:false,
+        items:4,
+        margin:40,
+        dots:false,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:5
+            }
+        }
+    })
 });
 
 // main

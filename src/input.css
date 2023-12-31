@@ -277,6 +277,26 @@ body{
     background-image: url('../img/image\ 12.png');
 }
 
+
+.card-product-slide1{
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.card-product-slide1::-webkit-scrollbar{
+    display: none;
+}
+
+#owlcarousel-product .item{
+    width: 110%;
+    height: 398px;
+}
+
+#owlcarousel-product .item-nth1{
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
+}
+
 /* -------------------------main------------------------------ */
 
 
