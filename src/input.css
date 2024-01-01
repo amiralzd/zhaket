@@ -264,6 +264,23 @@ body{
     .card-shop{
         border-radius: 4px 30px;
     }
+
+    #owlcarousel-product .item{
+        width: 102% !important;
+        height: 217px !important;
+    }
+
+    #owlcarousel-product .owl-item{
+        margin-left: 10px!important;
+    }
+    #owlcarousel-product2 .item{
+        width: 102% !important;
+        height: 217px !important;
+    }
+
+    #owlcarousel-product2 .owl-item{
+        margin-left: 10px!important;
+    }
 }
 
 
@@ -293,6 +310,16 @@ body{
 }
 
 #owlcarousel-product .item-nth1{
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
+}
+
+#owlcarousel-product2 .item{
+    width: 110%;
+    height: 398px;
+}
+
+#owlcarousel-product2 .item-nth1{
     border-top-right-radius: 5%;
     border-bottom-right-radius: 5%;
 }

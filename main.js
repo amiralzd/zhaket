@@ -43,8 +43,32 @@ $(document).ready(function () {
         margin:40,
         dots:false,
         responsive:{
+            margin:10,
             0:{
-                items:1
+                items:2
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:5
+            }
+        }
+    })
+});
+
+
+$(document).ready(function () {
+    $('#owlcarousel-product2').owlCarousel({
+        rtl:true,
+        loop:false,
+        items:4,
+        margin:40,
+        dots:false,
+        responsive:{
+            margin:10,
+            0:{
+                items:2
             },
             600:{
                 items:3
