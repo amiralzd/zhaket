@@ -11,19 +11,19 @@
 
 @font-face {
     font-family: ykbold;
-    src: url('../font/YekanBakh-Bold-ClubEdits.woff') format('woff');
+    src: url('../src/assets/font/YekanBakh-Bold-ClubEdits.woff') format('woff');
 }
 @font-face {
     font-family: yklight;
-    src: url('../font/YekanBakh-Light-ClubEdits.woff') format('woff');
+    src: url('../src/assets/font/YekanBakh-Light-ClubEdits.woff') format('woff');
 }
 @font-face {
     font-family: ykmedium;
-    src: url('../font/YekanBakh-Medium-ClubEdits.woff') format('woff');
+    src: url('../src/assets/font/YekanBakh-Medium-ClubEdits.woff') format('woff');
 }
 @font-face {
     font-family: ykregular;
-    src: url('../font/YekanBakh-Regular-ClubEdits.woff') format('woff');
+    src: url('../src/assets/font/YekanBakh-Regular-ClubEdits.woff') format('woff');
 }
 
 
@@ -281,6 +281,10 @@ body{
     #owlcarousel-product2 .owl-item{
         margin-left: 10px!important;
     }
+
+    #owlcarousel-product3 .item{
+        height: 149px !important;
+    }
 }
 
 
@@ -291,7 +295,7 @@ body{
 
 .card-shop{
     border-radius: 20px 100px;
-    background-image: url('../img/image\ 12.png');
+    background-image: url('../src/assets/img/image\ 12.png');
 }
 
 
@@ -323,6 +327,20 @@ body{
     border-top-right-radius: 5%;
     border-bottom-right-radius: 5%;
 }
+
+
+
+
+#owlcarousel-product3 .item{
+    width: 120%;
+    height: 230px;
+    border-radius: 30px;
+}
+
+
+
+
+
 
 /* -------------------------main------------------------------ */
 

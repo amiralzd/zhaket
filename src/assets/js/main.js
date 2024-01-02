@@ -30,7 +30,7 @@ $(document).ready(function () {
         slideSpeed : 300,
         paginationSpeed : 400,
    
-        items : 1, 
+        items : 1,
    
     });
 });
@@ -64,6 +64,29 @@ $(document).ready(function () {
         loop:false,
         items:4,
         margin:40,
+        dots:false,
+        responsive:{
+            margin:10,
+            0:{
+                items:2
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:5
+            }
+        }
+    })
+});
+
+
+$(document).ready(function () {
+    $('#owlcarousel-product3').owlCarousel({
+        rtl:true,
+        loop:false,
+        items:3,
+        margin:70,
         dots:false,
         responsive:{
             margin:10,

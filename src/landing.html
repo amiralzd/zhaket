@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/output.css">
+    <link rel="stylesheet" href="input.css">
+    <link rel="stylesheet" href="assets/carousel/owl.carousel.css">
+    <link rel="stylesheet" href="assets/carousel/owl.theme.default.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+    </script>
+
+    <title>Document</title>
+</head>
+<body>
+    <header class="w-full h-[160px] bg-white flex justify-center items-center max-sm:w-full max-sm:h-[64px] max-sm:justify-between max-sm:p-[16px] sticky top-0 z-[100]">
+      <!-- for burger menu -->
+      <section class="sm:hidden w-full h-[100vh] fixed right-0 top-0 z-[50] burgerMenu-backshadow flex justify-center items-center">
+        <div class="w-[300px] h-[400px] bg-white rounded-[10px] burger-card">
+          <div class="w-[30px] h-[30px] bg-[#f11f19] rounded-full mt-[-10px] mr-[-10px] burger-close flex justify-center items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+              <path d="M9 8.99978L1 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9 1.00022L1 9" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="w-[250px] h-[297px] m-auto flex flex-col gap-[17px]">
+            <a href="" class="w-full h-[18px] text-center burger-title">صفحه ی اصلی</a>
+            <hr>
+            <a href="" class="w-full h-[18px] text-center burger-paragraph">دسته بندی</a>
+            <hr>
+            <a href="" class="w-full h-[18px] text-center burger-paragraph">تخفیف دار ها</a>
+            <hr>
+            <a href="" class="w-full h-[18px] text-center burger-paragraph">درباره ی ما</a>
+            <hr>
+            <a href="" class="w-full h-[18px] text-center burger-paragraph">تماس با ما</a>
+            <hr>
+            <a href="" class="w-full h-[18px] text-center burger-paragraph">وبلاگ</a>
+            <hr>
+          </div>
+          <div class="w-[178px] h-[48px] card-login mr-[65px] mt-[10px]">
+            <a href="" class="w-[90px] h-[24px] login-text">ورود / ثبت نام</a>
+            <div class="w-[24px] h-[24px]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <mask id="mask0_7009_2878" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                      <rect width="24" height="24" fill="#D9D9D9"/>
+                    </mask>
+                    <g mask="url(#mask0_7009_2878)">
+                      <path d="M12 12C10.9 12 9.95833 11.6083 9.175 10.825C8.39167 10.0417 8 9.1 8 8C8 6.9 8.39167 5.95833 9.175 5.175C9.95833 4.39167 10.9 4 12 4C13.1 4 14.0417 4.39167 14.825 5.175C15.6083 5.95833 16 6.9 16 8C16 9.1 15.6083 10.0417 14.825 10.825C14.0417 11.6083 13.1 12 12 12ZM4 18V17.2C4 16.6333 4.14583 16.1125 4.4375 15.6375C4.72917 15.1625 5.11667 14.8 5.6 14.55C6.63333 14.0333 7.68333 13.6458 8.75 13.3875C9.81667 13.1292 10.9 13 12 13C13.1 13 14.1833 13.1292 15.25 13.3875C16.3167 13.6458 17.3667 14.0333 18.4 14.55C18.8833 14.8 19.2708 15.1625 19.5625 15.6375C19.8542 16.1125 20 16.6333 20 17.2V18C20 18.55 19.8042 19.0208 19.4125 19.4125C19.0208 19.8042 18.55 20 18 20H6C5.45 20 4.97917 19.8042 4.5875 19.4125C4.19583 19.0208 4 18.55 4 18Z" fill="white"/>
+                    </g>
+                </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+
+        <section class="sm:hidden w-[32px] h-[32px] burgerMenu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <mask id="mask0_2583_26489" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="32" height="32">
+                  <rect width="32" height="32" fill="#D9D9D9"/>
+                </mask>
+                <g mask="url(#mask0_2583_26489)">
+                  <path d="M5.33333 24C4.95556 24 4.63889 23.8722 4.38333 23.6167C4.12778 23.3611 4 23.0444 4 22.6667C4 22.2889 4.12778 21.9722 4.38333 21.7167C4.63889 21.4611 4.95556 21.3333 5.33333 21.3333H26.6667C27.0444 21.3333 27.3611 21.4611 27.6167 21.7167C27.8722 21.9722 28 22.2889 28 22.6667C28 23.0444 27.8722 23.3611 27.6167 23.6167C27.3611 23.8722 27.0444 24 26.6667 24H5.33333ZM5.33333 17.3333C4.95556 17.3333 4.63889 17.2056 4.38333 16.95C4.12778 16.6944 4 16.3778 4 16C4 15.6222 4.12778 15.3056 4.38333 15.05C4.63889 14.7944 4.95556 14.6667 5.33333 14.6667H26.6667C27.0444 14.6667 27.3611 14.7944 27.6167 15.05C27.8722 15.3056 28 15.6222 28 16C28 16.3778 27.8722 16.6944 27.6167 16.95C27.3611 17.2056 27.0444 17.3333 26.6667 17.3333H5.33333ZM5.33333 10.6667C4.95556 10.6667 4.63889 10.5389 4.38333 10.2833C4.12778 10.0278 4 9.71111 4 9.33333C4 8.95556 4.12778 8.63889 4.38333 8.38333C4.63889 8.12778 4.95556 8 5.33333 8H26.6667C27.0444 8 27.3611 8.12778 27.6167 8.38333C27.8722 8.63889 28 8.95556 28 9.33333C28 9.71111 27.8722 10.0278 27.6167 10.2833C27.3611 10.5389 27.0444 10.6667 26.6667 10.6667H5.33333Z" fill="#422872"/>
+                </g>
+            </svg>
+        </section>
+        
+
+        <section class="w-[71px] h-[68px] ml-[56px] max-sm:w-[34px] max-sm:h-[32px] max-sm:ml-0">
+            <img src="assets/svg/1.svg" class="max-sm:w-[34px] max-sm:h-[32px]" alt="">
+        </section>
+
+        <section class="w-[324px] h-[48px] max-sm:w-[32px] max-sm:h-[32px] max-sm:border-none rounded-[30px] flex justify-center items-center ml-[539px] border-solid border-[1px] border-[#efefef] max-sm:ml-0 ">
+            <input type="search" class="w-[260px] h-[24px] search-input bg-none max-sm:hidden" placeholder="جستجو">
+            <div class="w-[48px] h-[48px] card-search-icon mr-[10px] max-sm:w-[32px] max-sm:h-[32px] max-sm:p-[8px] max-sm:mr-0">
+                <img src="assets/svg/search.svg" class="max-sm:w-[20px] max-sm:h-[20px]" alt="">
+            </div>
+        </section>
+
+        <section class="w-[56px] h-[56px] ml-[24px] max-sm:hidden">
+            <div class="w-[24px] h-[24px] bg-[#f11f19] absolute rounded-full cart-num text-[#fff]">3</div>
+            <div class="w-[48px] h-[48px] card-Cart mr-[8px] mt-[8px]">
+                <img src="assets/svg/shopping_cart.svg" alt="">
+            </div>
+        </section>
+
+        <section class="w-[178px] h-[48px] card-login max-sm:hidden">
+            <a href="" class="w-[90px] h-[24px] login-text">ورود / ثبت نام</a>
+            <div class="w-[24px] h-[24px]">
+                <img src="assets/svg/person.svg" alt="">
+            </div>
+        </section>
+    </header>
+
+    
+
+
+
+
+    <nav class="w-full h-[40px] bg-white max-sm:hidden mb-[45px] sticky top-[160px] z-[40]">
+        <section class="w-[984px] h-[40px] mr-[96px] grid grid-cols-6 gap-[24px]">
+            <a href="" class="tab1">
+                <div class="w-[112px] h-[24px] text-[#fff]">صفحه ی اصلی</div>
+            </a>
+            <a href="" class="itemnav">
+                <div class="w-[24px] h-[24px]">
+                    <img src="assets/svg/arrow_drop_down.svg" alt="">
+                </div>
+                <div class="w-[78px] h-[24px]">دسته بندی</div>
+            </a>
+            <a href="" class="itemnav">تخفیف دار ها</a>
+            <a href="aboutUs.html" class="itemnav">درباره ی ما</a>
+            <a href="" class="itemnav">تماس با ما</a>
+            <a href="" class="itemnav">وبلاگ</a>
+        </section>
+    </nav>
+
+
+
+    <main>
+      <!-- first slide (big slide) -->
+      <section class="max-w-[1248px] h-[513px] m-auto rounded-[37px] max-sm:max-w-[360px] max-sm:h-[130px]">
+        <div id="owl-carousel1" class="owl-carousel owl-theme max-sm:w-full max-sm:h-[130px] max-sm:mt-[16px]">
+          <div class="item"><img src="assets/img/Rectangle 2.png" alt=""></div>
+          <div class="item"><img src="assets/img/Rectangle 2.png" alt=""></div>
+          <div class="item"><img src="assets/img/Rectangle 2.png" alt=""></div>
+          <div class="item"><img src="assets/img/Rectangle 2.png" alt=""></div>
+          <div class="item"><img src="assets/img/Rectangle 2.png" alt=""></div>
+        </div>
+      </section>
+
+      <!-- card shop -->
+      <section class="max-w-[1248px] h-[360px] mt-[61px] m-auto grid grid-cols-3 gap-[24px] max-sm:w-[360px] max-sm:h-[102px] max-sm:gap-[9px]">
+        <a href="" class="card-shop bg-white flex max-sm:rounded-tr-[30px] max-sm:rounded-bl-[30px] max-sm:rounded-tl-[4px] max-sm:rounded-br-[4px]">
+          <div class="w-[284px] h-[426px] mt-[-41px] mb-[-25px] max-sm:w-[80px] max-sm:h-[120px] max-sm:mt-[-9px] max-sm:mb-[-9px]"><img src="assets/img/1.png" alt=""></div>
+          <div class="w-[91px] h-[62px] mr-[-29px] mt-[35px] text-[#201730] text-center font-bold leading-normal text-[40px] max-sm:w-[37px] max-sm:h-[25px] max-sm:mt-[5px] max-sm:mr-[-20px] max-sm:text-[16px]"><p>مردانه</p></div>
+        </a>
+        <a href="" class="card-shop bg-white flex max-sm:rounded-tr-[30px] max-sm:rounded-bl-[30px] max-sm:rounded-tl-[4px] max-sm:rounded-br-[4px]">
+          <div class="w-[169px] h-[286px] mt-[100px] mb-[-26px] mr-[111px] max-sm:w-[47px] max-sm:h-[80px] max-sm:mt-[31px] max-sm:mb-[-9px] max-sm:mr-[32px]"><img src="assets/img/2.png" alt=""></div>
+          <div class="w-[102px] h-[62px] mr-[-125px] mt-[35px] text-[#201730] text-center font-bold leading-normal text-[40px] max-sm:w-[41px] max-sm:h-[25px] max-sm:text-[16px] max-sm:mr-[-40px] max-sm:mt-[5px]"><p>بچگانه</p></div>
+        </a>
+        <a href="" class="card-shop bg-white flex max-sm:rounded-tr-[30px] max-sm:rounded-bl-[30px] max-sm:rounded-tl-[4px] max-sm:rounded-br-[4px]">
+          <div class="w-[64px] h-[62px] mt-[35px] mr-[65px] text-[#201730] text-center font-bold leading-normal text-[40px] max-sm:w-[26px] max-sm:h-[25px] max-sm:mt-[5px] max-sm:mr-[17px] max-sm:text-[16px]"><p>زنانه</p></div>
+          <div class="w-[282px] h-[421px] mt-[-41px] mb-[-20px] mr-[9px] max-sm:w-[80px] max-sm:h-[119px] max-sm:mt-[-12px] max-sm:mb-[-5px] max-sm:mr-[-3px]"><img src="assets/img/3.png" alt=""></div>
+        </a>
+      </section>
+
+      <!-- product slide 1 -->
+      <section class="max-w-[1520px] h-[525px] bg-[#9587B0] mt-[72px] m-auto pt-[24px] max-sm:w-full max-sm:h-[272px] max-sm:pt-[12px] max-sm:pb-[12px] max-sm:pr-[5px]">
+        <div class="w-[85%] h-[48px] m-auto flex justify-between items-center mb-[25px] max-sm:w-[358px] max-sm:h-[19px] max-sm:mb-[12px]">
+          <div class="w-[235px] h-[48px] flex justify-between items-center max-sm:w-[113px] max-sm:h-[19px]">
+            <div class="w-[8px] h-[48px] rounded-tl-[20px] rounded-br-[20px] bg-[#201730] max-sm:w-[3px] max-sm:h-[18px]"></div>
+            <div class="w-[203px] h-[37px] text-[#f6f4f8] text-center font-black text-[24px] leading-normal max-sm:w-[102px] max-sm:h-[19px] max-sm:text-[12px]"><p>تخفیف ها و پیشنهادات</p></div>
+          </div>
+          <a href="" class="w-[50px] h-[37px] text-[#fff] text-center font-bold text-[24px] leading-normal max-sm:w-[25px] max-sm:h-[19px] max-sm:text-[12px]"><p>بیشتر</p></a>
+        </div>
+
+        <div class="w-[92.5%] h-[398px] mr-[7.5%] max-sm:w-[98%] max-sm:h-[217px] max-sm:mr-[2%]">
+          <div id="owlcarousel-product" class="owl-carousel owl-theme w-full h-[398px] max-sm:w-full max-sm:h-[217px]">
+
+            <div class="item item-nth1 p-[16px] bg-white w-[100%] h-[398px] max-sm:w-[50%] max-sm:h-[217px] max-sm:p-[8px] ml-[20px]">
+              <div class="w-[100%] h-[300px] relative max-sm:w-[151px] max-sm:h-[152px]">
+                <div class="w-[63px] h-[43px] rounded-tr-[40px] rounded-tl-[30px] rounded-bl-[30px] bg-[#f11f19] absolute left-0 pt-[8px] pb-[8px] pr-[16px] pl-[16px] text-[#fff] text-center font-bold leading-normal text-[16px] max-sm:w-[41.97px] max-sm:h-[24px] max-sm:pt-[4px] max-sm:pb-[4px] max-sm:pr-[8px] max-sm:pl-[8px] max-sm:rounded-br-[2px] max-sm:rounded-tr-[40px] max-sm:rounded-tl-[20px] max-sm:rounded-bl-[20px] max-sm:text-[10px]"><p>20%</p>
+                </div>
+                <img src="assets/img/dress1.png" alt="">
+              </div>
+              <div class="w-[100%] h-[50px] flex justify-between max-sm:w-[141px] max-sm:h-[41px] max-sm:flex-col mt-[18px]">
+                <div class="w-[140px] h-[25px] text-[#212121] text-right font-medium leading-normal text-[16px] max-sm:w-[141px] max-sm:h-[19px] max-sm:text-[12px]"><p>بافت سورمه ای</p></div>
+                <div class="w-[110px] h-[50px] max-sm:flex max-sm:flex-row-reverse max-sm:gap-[16px] max-sm:w-full">
+                  <div class="w-[83px] h-[25px] mr-auto text-[#422872] text-right text-[16px] font-bold leading-normal max-sm:text-[12px] max-sm:w-[64px] max-sm:h-[16px]"><p>336,000 <span class="text-[#422872] text-[12px] font-bold leading-normal max-sm:text-[8px]">تومان</span></p></div>
+                  <div class="w-[65px] h-[25px] mr-auto text-[#9e9e9e] text-right text-[12px] font-bold leading-normal line-through max-sm:text-[10px] max-sm:w-[61px] max-sm:h-[22px]">420,000 <span class="text-[10px] max-sm:text-[10px]">تومان</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item p-[16px] bg-white w-[100%] h-[398px] max-sm:w-[50%] max-sm:h-[217px] max-sm:p-[8px]">
+              <div class="w-[100%] h-[300px] relative max-sm:w-[151px] max-sm:h-[152px]">
+                <div class="w-[63px] h-[43px] rounded-tr-[40px] rounded-tl-[30px] rounded-bl-[30px] bg-[#f11f19] absolute left-0 pt-[8px] pb-[8px] pr-[16px] pl-[16px] text-[#fff] text-center font-bold leading-normal text-[16px] max-sm:w-[41.97px] max-sm:h-[24px] max-sm:pt-[4px] max-sm:pb-[4px] max-sm:pr-[8px] max-sm:pl-[8px] max-sm:rounded-br-[2px] max-sm:rounded-tr-[40px] max-sm:rounded-tl-[20px] max-sm:rounded-bl-[20px] max-sm:text-[10px]"><p>20%</p>
+                </div>
+                <img src="assets/img/dress2.png" alt="">
+              </div>
+              <div class="w-[100%] h-[50px] flex justify-between max-sm:w-[141px] max-sm:h-[41px] max-sm:flex-col mt-[18px]">
+                <div class="w-[140px] h-[25px] text-[#212121] text-right font-medium leading-normal text-[16px] max-sm:w-[141px] max-sm:h-[19px] max-sm:text-[12px]"><p>بافت سورمه ای</p></div>
+                <div class="w-[110px] h-[50px] max-sm:flex max-sm:flex-row-reverse max-sm:gap-[16px] max-sm:w-full">
+                  <div class="w-[83px] h-[25px] mr-auto text-[#422872] text-right text-[16px] font-bold leading-normal max-sm:text-[12px] max-sm:w-[64px] max-sm:h-[16px]"><p>336,000 <span class="text-[#422872] text-[12px] font-bold leading-normal max-sm:text-[8px]">تومان</span></p></div>
+                  <div class="w-[65px] h-[25px] mr-auto text-[#9e9e9e] text-right text-[12px] font-bold leading-normal line-through max-sm:text-[10px] max-sm:w-[61px] max-sm:h-[22px]">420,000 <span class="text-[10px] max-sm:text-[10px]">تومان</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item p-[16px] bg-white w-[100%] h-[398px] max-sm:w-[50%] max-sm:h-[217px] max-sm:p-[8px]">
+              <div class="w-[100%] h-[300px] relative max-sm:w-[151px] max-sm:h-[152px]">
+                <div class="w-[63px] h-[43px] rounded-tr-[40px] rounded-tl-[30px] rounded-bl-[30px] bg-[#f11f19] absolute left-0 pt-[8px] pb-[8px] pr-[16px] pl-[16px] text-[#fff] text-center font-bold leading-normal text-[16px] max-sm:w-[41.97px] max-sm:h-[24px] max-sm:pt-[4px] max-sm:pb-[4px] max-sm:pr-[8px] max-sm:pl-[8px] max-sm:rounded-br-[2px] max-sm:rounded-tr-[40px] max-sm:rounded-tl-[20px] max-sm:rounded-bl-[20px] max-sm:text-[10px]"><p>20%</p></div>
+                <img src="assets/img/dress3.png" alt="">
+              </div>
+              <div class="w-[100%] h-[50px] flex justify-between max-sm:w-[141px] max-sm:h-[41px] max-sm:flex-col mt-[18px]">
+                <div class="w-[140px] h-[25px] text-[#212121] text-right font-medium leading-normal text-[16px] max-sm:w-[141px] max-sm:h-[19px] max-sm:text-[12px]"><p>بافت سورمه ای</p></div>
+                <div class="w-[110px] h-[50px] max-sm:flex max-sm:flex-row-reverse max-sm:gap-[16px] max-sm:w-full">
+                  <div class="w-[83px] h-[25px] mr-auto text-[#422872] text-right text-[16px] font-bold leading-normal max-sm:text-[12px] max-sm:w-[64px] max-sm:h-[16px]"><p>336,000 <span class="text-[#422872] text-[12px] font-bold leading-normal max-sm:text-[8px]">تومان</span></p></div>
+                  <div class="w-[65px] h-[25px] mr-auto text-[#9e9e9e] text-right text-[12px] font-bold leading-normal line-through max-sm:text-[10px] max-sm:w-[61px] max-sm:h-[22px]">420,000 <span class="text-[10px] max-sm:text-[10px]">تومان</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item p-[16px] bg-white w-[100%] h-[398px] max-sm:w-[50%] max-sm:h-[217px] max-sm:p-[8px]">
+              <div class="w-[100%] h-[300px] relative max-sm:w-[151px] max-sm:h-[152px]">
+                <div class="w-[63px] h-[43px] rounded-tr-[40px] rounded-tl-[30px] rounded-bl-[30px] bg-[#f11f19] absolute left-0 pt-[8px] pb-[8px] pr-[16px] pl-[16px] text-[#fff] text-center font-bold leading-normal text-[16px] max-sm:w-[41.97px] max-sm:h-[24px] max-sm:pt-[4px] max-sm:pb-[4px] max-sm:pr-[8px] max-sm:pl-[8px] max-sm:rounded-br-[2px] max-sm:rounded-tr-[40px] max-sm:rounded-tl-[20px] max-sm:rounded-bl-[20px] max-sm:text-[10px]"><p>20%</p></div>
+                <img src="assets/img/dress4.png" alt="">
+              </div>
+              <div class="w-[100%] h-[50px] flex justify-between max-sm:w-[141px] max-sm:h-[41px] max-sm:flex-col mt-[18px]">
+                <div class="w-[140px] h-[25px] text-[#212121] text-right font-medium leading-normal text-[16px] max-sm:w-[141px] max-sm:h-[19px] max-sm:text-[12px]"><p>بافت سورمه ای</p></div>
+                <div class="w-[110px] h-[50px] max-sm:flex max-sm:flex-row-reverse max-sm:gap-[16px] max-sm:w-full">
+                  <div class="w-[83px] h-[25px] mr-auto text-[#422872] text-right text-[16px] font-bold leading-normal max-sm:text-[12px] max-sm:w-[64px] max-sm:h-[16px]"><p>336,000 <span class="text-[#422872] text-[12px] font-bold leading-normal max-sm:text-[8px]">تومان</span></p></div>
+                  <div class="w-[65px] h-[25px] mr-auto text-[#9e9e9e] text-right text-[12px] font-bold leading-normal line-through max-sm:text-[10px] max-sm:w-[61px] max-sm:h-[22px]">420,000 <span class="text-[10px] max-sm:text-[10px]">تومان</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item p-[16px] bg-white w-[100%] h-[398px] max-sm:w-[50%] max-sm:h-[217px] max-sm:p-[8px]">
+              <div class="w-[100%] h-[300px] relative max-sm:w-[151px] max-sm:h-[152px]">
+                <div class="w-[63px] h-[43px] rounded-tr-[40px] rounded-tl-[30px] rounded-bl-[30px] bg-[#f11f19] absolute left-0 pt-[8px] pb-[8px] pr-[16px] pl-[16px] text-[#fff] text-center font-bold leading-normal text-[16px] max-sm:w-[41.97px] max-sm:h-[24px] max-sm:pt-[4px] max-sm:pb-[4px] max-sm:pr-[8px] max-sm:pl-[8px] max-sm:rounded-br-[2px] max-sm:rounded-tr-[40px] max-sm:rounded-tl-[20px] max-sm:rounded-bl-[20px] max-sm:text-[10px]"><p>20%</p></div>
+                <img src="assets/img/dress2.png" alt="">
+              </div>
+              <div class="w-[100%] h-[50px] flex justify-between max-sm:w-[141px] max-sm:h-[41px] max-sm:flex-col mt-[18px]">
+                <div class="w-[140px] h-[25px] text-[#212121] text-right font-medium leading-normal text-[16px] max-sm:w-[141px] max-sm:h-[19px] max-sm:text-[12px]"><p>بافت سورمه ای</p></div>
+                <div class="w-[110px] h-[50px] max-sm:flex max-sm:flex-row-reverse max-sm:gap-[16px] max-sm:w-full">
+                  <div class="w-[83px] h-[25px] mr-auto text-[#422872] text-right text-[16px] font-bold leading-normal max-sm:text-[12px] max-sm:w-[64px] max-sm:h-[16px]"><p>336,000 <span class="text-[#422872] text-[12px] font-bold leading-normal max-sm:text-[8px]">تومان</span></p></div>
+                  <div class="w-[65px] h-[25px] mr-auto text-[#9e9e9e] text-right text-[12px] font-bold leading-normal line-through max-sm:text-[10px] max-sm:w-[61px] max-sm:h-[22px]">420,000 <span class="text-[10px] max-sm:text-[10px]">تومان</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item p-[16px] bg-white w-[100%] h-[398px] max-sm:w-[50%] max-sm:h-[217px] max-sm:p-[8px]">
+              <div class="w-[100%] h-[300px] relative max-sm:w-[151px] max-sm:h-[152px]">
+                <div class="w-[63px] h-[43px] rounded-tr-[40px] rounded-tl-[30px] rounded-bl-[30px] bg-[#f11f19] absolute left-0 pt-[8px] pb-[8px] pr-[16px] pl-[16px] text-[#fff] text-center font-bold leading-normal text-[16px] max-sm:w-[41.97px] max-sm:h-[24px] max-sm:pt-[4px] max-sm:pb-[4px] max-sm:pr-[8px] max-sm:pl-[8px] max-sm:rounded-br-[2px] max-sm:rounded-tr-[40px] max-sm:rounded-tl-[20px] max-sm:rounded-bl-[20px] max-sm:text-[10px]"><p>20%</p></div>
+                <img src="assets/img/dress2.png" alt="">
+              </div>
+              <div class="w-[100%] h-[50px] flex justify-between max-sm:w-[141px] max-sm:h-[41px] max-sm:flex-col mt-[18px]">
+                <div class="w-[140px] h-[25px] text-[#212121] text-right font-medium leading-normal text-[16px] max-sm:w-[141px] max-sm:h-[19px] max-sm:text-[12px]"><p>بافت سورمه ای</p></div>
+                <div class="w-[110px] h-[50px] max-sm:flex max-sm:flex-row-reverse max-sm:gap-[16px] max-sm:w-full">
+                  <div class="w-[83px] h-[25px] mr-auto text-[#422872] text-right text-[16px] font-bold leading-normal max-sm:text-[12px] max-sm:w-[64px] max-sm:h-[16px]"><p>336,000 <span class="text-[#422872] text-[12px] font-bold leading-normal max-sm:text-[8px]">تومان</span></p></div>
+                  <div class="w-[65px] h-[25px] mr-auto text-[#9e9e9e] text-right text-[12px] font-bold leading-normal line-through max-sm:text-[10px] max-sm:w-[61px] max-sm:h-[22px]">420,000 <span class="text-[10px] max-sm:text-[10px]">تومان</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item p-[16px] bg-white w-[100%] h-[398px] max-sm:w-[50%] max-sm:h-[217px] max-sm:p-[8px]">
+              <div class="w-[100%] h-[300px] relative max-sm:w-[151px] max-sm:h-[152px]">
+                <div class="w-[63px] h-[43px] rounded-tr-[40px] rounded-tl-[30px] rounded-bl-[30px] bg-[#f11f19] absolute left-0 pt-[8px] pb-[8px] pr-[16px] pl-[16px] text-[#fff] text-center font-bold leading-normal text-[16px] max-sm:w-[41.97px] max-sm:h-[24px] max-sm:pt-[4px] max-sm:pb-[4px] max-sm:pr-[8px] max-sm:pl-[8px] max-sm:rounded-br-[2px] max-sm:rounded-tr-[40px] max-sm:rounded-tl-[20px] max-sm:rounded-bl-[20px] max-sm:text-[10px]"><p>20%</p></div>
+                <img src="assets/img/dress2.png" alt="">
+              </div>
+              <div class="w-[100%] h-[50px] flex justify-between max-sm:w-[141px] max-sm:h-[41px] max-sm:flex-col mt-[18px]">
+                <div class="w-[140px] h-[25px] text-[#212121] text-right font-medium leading-normal text-[16px] max-sm:w-[141px] max-sm:h-[19px] max-sm:text-[12px]"><p>بافت سورمه ای</p></div>
+                <div class="w-[110px] h-[50px] max-sm:flex max-sm:flex-row-reverse max-sm:gap-[16px] max-sm:w-full">
+                  <div class="w-[83px] h-[25px] mr-auto text-[#422872] text-right text-[16px] font-bold leading-normal max-sm:text-[12px] max-sm:w-[64px] max-sm:h-[16px]"><p>336,000 <span class="text-[#422872] text-[12px] font-bold leading-normal max-sm:text-[8px]">تومان</span></p></div>
+                  <div class="w-[65px] h-[25px] mr-auto text-[#9e9e9e] text-right text-[12px] font-bold leading-normal line-through max-sm:text-[10px] max-sm:w-[61px] max-sm:h-[22px]">420,000 <span class="text-[10px] max-sm:text-[10px]">تومان</span></div>
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+      </section>
+
+      <!-- products categorization -->
+      <section class="max-w-[247px] h-[50px] mt-[74px] m-auto text-[#1c1429] text-center font-black text-[31px] leading-normal max-sm:w-[124px] max-sm:h-[25px] max-sm:text-[15px] max-sm:mt-[36px]"><p>دسته بندی محصولات</p></section>
+
+      <!-- products categorization item -->
+      <section class="w-[85%] m-auto mt-[58px] flex flex-wrap justify-center items-center gap-[24px] max-sm:gap-[20px] max-sm:w-full max-sm:mt-[24px]">
+
+        <a href="" class="w-[230px] h-[220px] bg-white rounded-tr-[100px] rounded-tl-[100px] rounded-br-[20px] rounded-bl-[20px] max-sm:w-[106px] max-sm:h-[101px] max-sm:rounded-tr-[40px] max-sm:rounded-tl-[40px] max-sm:br-[8px] max-sm:bl-[8px]">
+          <div class="w-[185px] h-[185px] m-auto mr-[22px] mt-[18px] max-sm:w-[83px] max-sm:h-[83px] max-sm:mt-[2px] max-sm:mr-[8px]"><img src="assets/img/poshak1.png" alt=""></div>
+          <div class="w-[153px] h-[39px] m-auto mb-[-25px] bg-[#6E5B94] rounded-[30px] pt-[4px] pb-[4px] pl-[8px] pr-[8px] flex justify-center items-center text-[#fff] text-center font-medium leading-normal text-[20px] max-sm:w-[77px] max-sm:h-[27px] max-sm:text-[12px]"><p>لباس</p></div>
+        </a>
+
+        <a href="" class="w-[230px] h-[220px] bg-white rounded-tr-[100px] rounded-tl-[100px] rounded-br-[20px] rounded-bl-[20px] max-sm:w-[106px] max-sm:h-[101px] max-sm:rounded-tr-[40px] max-sm:rounded-tl-[40px] max-sm:br-[8px] max-sm:bl-[8px]">
+          <div class="w-[148px] h-[203px] m-auto mr-[41px] max-sm:w-[66px] max-sm:h-[83px] max-sm:mr-[21px]"><img src="assets/img/poshak2.png" alt=""></div>
+          <div class="w-[153px] h-[39px] mb-[-25px] bg-[#6E5B94] rounded-[30px] pt-[4px] pb-[4px] pl-[8px] pr-[8px] flex justify-center items-center text-[#fff] text-center font-medium leading-normal text-[20px] m-auto max-sm:w-[77px] max-sm:h-[27px] max-sm:text-[12px]"><p>شلوار</p></div>
+        </a>
+
+        <a href="" class="w-[230px] h-[220px] bg-white rounded-tr-[100px] rounded-tl-[100px] rounded-br-[20px] rounded-bl-[20px] max-sm:w-[106px] max-sm:h-[101px] max-sm:rounded-tr-[40px] max-sm:rounded-tl-[40px] max-sm:br-[8px] max-sm:bl-[8px]">
+          <div class="w-[156px] h-[156px] m-auto mr-[37px] mt-[32px] mb-[14px] max-sm:w-[79px] max-sm:h-[70px] max-sm:mt-0 max-sm:mr-[14px] max-sm:rounded-[40%]"><img class="max-sm:rounded-[40%]" src="assets/img/poshak3.png" alt=""></div>
+          <div class="w-[153px] h-[39px] mb-[-25px] bg-[#6E5B94] rounded-[30px] pt-[4px] pb-[4px] pl-[8px] pr-[8px] flex justify-center items-center text-[#fff] text-center font-medium leading-normal text-[20px] m-auto max-sm:w-[77px] max-sm:h-[27px] max-sm:text-[12px]"><p>کفش</p></div>
+        </a>
+
+        <a href="" class="w-[230px] h-[220px] bg-white rounded-tr-[100px] rounded-tl-[100px] rounded-br-[20px] rounded-bl-[20px] max-sm:w-[106px] max-sm:h-[101px] max-sm:rounded-tr-[40px] max-sm:rounded-tl-[40px] max-sm:br-[8px] max-sm:bl-[8px]">
+          <div class="w-[160px] h-[203px] m-auto mr-[35px] max-sm:w-[76px] max-sm:h-[83px] max-sm:m-auto"><img src="assets/img/poshak4.png" alt=""></div>
+          <div class="w-[153px] h-[39px] mb-[-25px] bg-[#6E5B94] rounded-[30px] pt-[4px] pb-[4px] pl-[8px] pr-[8px] flex justify-center items-center text-[#fff] text-center font-medium leading-normal text-[20px] m-auto max-sm:w-[77px] max-sm:h-[27px] max-sm:text-[12px]"><p>کفش</p></div>
+        </a>
+
+        <a href="" class="w-[230px] h-[220px] bg-white rounded-tr-[100px] rounded-tl-[100px] rounded-br-[20px] rounded-bl-[20px] max-sm:w-[106px] max-sm:h-[101px] max-sm:rounded-tr-[40px] max-sm:rounded-tl-[40px] max-sm:br-[8px] max-sm:bl-[8px]">
+          <div class="w-[121px] h-[121px] m-auto mr-[54px] mt-[50px] mb-[31px] max-sm:w-[76px] max-sm:h-[77px] max-sm:mt-[8px] max-sm:mr-auto max-sm:mb-0"><img src="assets/img/poshak5.png" alt=""></div>
+          <div class="w-[153px] h-[39px] mb-[-25px] bg-[#6E5B94] rounded-[30px] pt-[4px] pb-[4px] pl-[8px] pr-[8px] flex justify-center items-center text-[#fff] text-center font-medium leading-normal text-[20px] m-auto max-sm:w-[77px] max-sm:h-[27px] max-sm:text-[12px]"><p>اکسسوری</p></div>
+        </a>
+        
+      </section>
+
+
+
+
+      <!-- product slide 2 -->
+      <section class="max-w-[1520px] h-[525px] bg-[#C7B8E5] mt-[112px] m-auto pt-[24px] max-sm:w-full max-sm:h-[272px] max-sm:pt-[12px] max-sm:pb-[12px] max-sm:pr-[5px]">
+        <div class="w-[85%] h-[48px] m-auto flex justify-between items-center mb-[25px] max-sm:w-[358px] max-sm:h-[19px] max-sm:mb-[12px]">
+          <div class="w-[235px] h-[48px] flex justify-between items-center max-sm:w-[113px] max-sm:h-[19px]">
+            <div class="w-[8px] h-[48px] rounded-tl-[20px] rounded-br-[20px] bg-[#201730] max-sm:w-[3px] max-sm:h-[18px]"></div>
+            <div class="w-[203px] h-[37px] text-[#f6f4f8] text-center font-black text-[24px] leading-normal max-sm:w-[102px] max-sm:h-[19px] max-sm:text-[12px]"><p>تخفیف ها و پیشنهادات</p></div>
+          </div>
+          <a href="" class="w-[50px] h-[37px] text-[#fff] text-center font-bold text-[24px] leading-normal max-sm:w-[25px] max-sm:h-[19px] max-sm:text-[12px]"><p>بیشتر</p></a>
+        </div>
+
+        <div class="w-[92.5%] h-[398px] mr-[7.5%] max-sm:w-[98%] max-sm:h-[217px] max-sm:mr-[2%]">
+          <div id="owlcarousel-product2" class="owl-carousel owl-theme w-full h-[398px] max-sm:w-full max-sm:h-[217px]">
+
+            <div class="item item-nth1 p-[16px] bg-white w-[100%] h-[398px] max-sm:w-[50%] max-sm:h-[217px] max-sm:p-[8px] ml-[20px]">
+              <div class="w-[100%] h-[300px] relative max-sm:w-[151px] max-sm:h-[152px]">
+                <div class="w-[40px] h-[40px] absolute left-0 max-sm:w-[24px] max-sm:h-[24px]">
+                  <img src="assets/svg/like.svg" class="max-sm:w-[24px] max-sm:h-[24px]" alt="">
+                </div>
+                <img src="assets/img/dress1.png" alt="">
+              </div>
+              <div class="w-[100%] h-[50px] flex justify-between max-sm:w-[141px] max-sm:h-[41px] max-sm:flex-col mt-[18px]">
+                <div class="w-[140px] h-[25px] text-[#212121] text-right font-medium leading-normal text-[16px] max-sm:w-[141px] max-sm:h-[19px] max-sm:text-[12px]"><p>بافت سورمه ای</p></div>
+                <div class="w-[110px] h-[50px] max-sm:flex max-sm:flex-row-reverse max-sm:gap-[16px] max-sm:w-full">
+                  <div class="w-[83px] h-[25px] mr-auto text-[#422872] text-right text-[16px] font-bold leading-normal max-sm:text-[12px] max-sm:w-[64px] max-sm:h-[16px]"><p>336,000 <span class="text-[#422872] text-[12px] font-bold leading-normal max-sm:text-[8px]">تومان</span></p></div>
+                  <div class="w-[65px] h-[25px] mr-auto text-[#9e9e9e] text-right text-[12px] font-bold leading-normal line-through max-sm:text-[10px] max-sm:w-[61px] max-sm:h-[22px]">420,000 <span class="text-[10px] max-sm:text-[10px]">تومان</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item p-[16px] bg-white w-[100%] h-[398px] max-sm:w-[50%] max-sm:h-[217px] max-sm:p-[8px]">
+              <div class="w-[100%] h-[300px] relative max-sm:w-[151px] max-sm:h-[152px]">
+                <div class="w-[40px] h-[40px] absolute left-0 max-sm:w-[24px] max-sm:h-[24px]">
+                  <img src="assets/svg/like.svg" class="max-sm:w-[24px] max-sm:h-[24px]" alt="">
+                </div>
+                <img src="assets/img/dress2.png" alt="">
+              </div>
+              <div class="w-[100%] h-[50px] flex justify-between max-sm:w-[141px] max-sm:h-[41px] max-sm:flex-col mt-[18px]">
+                <div class="w-[140px] h-[25px] text-[#212121] text-right font-medium leading-normal text-[16px] max-sm:w-[141px] max-sm:h-[19px] max-sm:text-[12px]"><p>بافت سورمه ای</p></div>
+                <div class="w-[110px] h-[50px] max-sm:flex max-sm:flex-row-reverse max-sm:gap-[16px] max-sm:w-full">
+                  <div class="w-[83px] h-[25px] mr-auto text-[#422872] text-right text-[16px] font-bold leading-normal max-sm:text-[12px] max-sm:w-[64px] max-sm:h-[16px]"><p>336,000 <span class="text-[#422872] text-[12px] font-bold leading-normal max-sm:text-[8px]">تومان</span></p></div>
+                  <div class="w-[65px] h-[25px] mr-auto text-[#9e9e9e] text-right text-[12px] font-bold leading-normal line-through max-sm:text-[10px] max-sm:w-[61px] max-sm:h-[22px]">420,000 <span class="text-[10px] max-sm:text-[10px]">تومان</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item p-[16px] bg-white w-[100%] h-[398px] max-sm:w-[50%] max-sm:h-[217px] max-sm:p-[8px]">
+              <div class="w-[100%] h-[300px] relative max-sm:w-[151px] max-sm:h-[152px]">
+                <div class="w-[40px] h-[40px] absolute left-0 max-sm:w-[24px] max-sm:h-[24px]">
+                  <img src="assets/svg/like.svg" class="max-sm:w-[24px] max-sm:h-[24px]" alt="">
+                </div>
+                <img src="assets/img/dress3.png" alt="">
+              </div>
+              <div class="w-[100%] h-[50px] flex justify-between max-sm:w-[141px] max-sm:h-[41px] max-sm:flex-col mt-[18px]">
+                <div class="w-[140px] h-[25px] text-[#212121] text-right font-medium leading-normal text-[16px] max-sm:w-[141px] max-sm:h-[19px] max-sm:text-[12px]"><p>بافت سورمه ای</p></div>
+                <div class="w-[110px] h-[50px] max-sm:flex max-sm:flex-row-reverse max-sm:gap-[16px] max-sm:w-full">
+                  <div class="w-[83px] h-[25px] mr-auto text-[#422872] text-right text-[16px] font-bold leading-normal max-sm:text-[12px] max-sm:w-[64px] max-sm:h-[16px]"><p>336,000 <span class="text-[#422872] text-[12px] font-bold leading-normal max-sm:text-[8px]">تومان</span></p></div>
+                  <div class="w-[65px] h-[25px] mr-auto text-[#9e9e9e] text-right text-[12px] font-bold leading-normal line-through max-sm:text-[10px] max-sm:w-[61px] max-sm:h-[22px]">420,000 <span class="text-[10px] max-sm:text-[10px]">تومان</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item p-[16px] bg-white w-[100%] h-[398px] max-sm:w-[50%] max-sm:h-[217px] max-sm:p-[8px]">
+              <div class="w-[100%] h-[300px] relative max-sm:w-[151px] max-sm:h-[152px]">
+                <div class="w-[40px] h-[40px] absolute left-0 max-sm:w-[24px] max-sm:h-[24px]">
+                  <img src="assets/svg/like.svg" class="max-sm:w-[24px] max-sm:h-[24px]" alt="">
+                </div>
+                <img src="assets/img/dress4.png" alt="">
+              </div>
+              <div class="w-[100%] h-[50px] flex justify-between max-sm:w-[141px] max-sm:h-[41px] max-sm:flex-col mt-[18px]">
+                <div class="w-[140px] h-[25px] text-[#212121] text-right font-medium leading-normal text-[16px] max-sm:w-[141px] max-sm:h-[19px] max-sm:text-[12px]"><p>بافت سورمه ای</p></div>
+                <div class="w-[110px] h-[50px] max-sm:flex max-sm:flex-row-reverse max-sm:gap-[16px] max-sm:w-full">
+                  <div class="w-[83px] h-[25px] mr-auto text-[#422872] text-right text-[16px] font-bold leading-normal max-sm:text-[12px] max-sm:w-[64px] max-sm:h-[16px]"><p>336,000 <span class="text-[#422872] text-[12px] font-bold leading-normal max-sm:text-[8px]">تومان</span></p></div>
+                  <div class="w-[65px] h-[25px] mr-auto text-[#9e9e9e] text-right text-[12px] font-bold leading-normal line-through max-sm:text-[10px] max-sm:w-[61px] max-sm:h-[22px]">420,000 <span class="text-[10px] max-sm:text-[10px]">تومان</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item p-[16px] bg-white w-[100%] h-[398px] max-sm:w-[50%] max-sm:h-[217px] max-sm:p-[8px]">
+              <div class="w-[100%] h-[300px] relative max-sm:w-[151px] max-sm:h-[152px]">
+                <div class="w-[40px] h-[40px] absolute left-0 max-sm:w-[24px] max-sm:h-[24px]">
+                  <img src="assets/svg/like.svg" class="max-sm:w-[24px] max-sm:h-[24px]" alt="">
+                </div>
+                <img src="assets/img/dress1.png" alt="">
+              </div>
+              <div class="w-[100%] h-[50px] flex justify-between max-sm:w-[141px] max-sm:h-[41px] max-sm:flex-col mt-[18px]">
+                <div class="w-[140px] h-[25px] text-[#212121] text-right font-medium leading-normal text-[16px] max-sm:w-[141px] max-sm:h-[19px] max-sm:text-[12px]"><p>بافت سورمه ای</p></div>
+                <div class="w-[110px] h-[50px] max-sm:flex max-sm:flex-row-reverse max-sm:gap-[16px] max-sm:w-full">
+                  <div class="w-[83px] h-[25px] mr-auto text-[#422872] text-right text-[16px] font-bold leading-normal max-sm:text-[12px] max-sm:w-[64px] max-sm:h-[16px]"><p>336,000 <span class="text-[#422872] text-[12px] font-bold leading-normal max-sm:text-[8px]">تومان</span></p></div>
+                  <div class="w-[65px] h-[25px] mr-auto text-[#9e9e9e] text-right text-[12px] font-bold leading-normal line-through max-sm:text-[10px] max-sm:w-[61px] max-sm:h-[22px]">420,000 <span class="text-[10px] max-sm:text-[10px]">تومان</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item p-[16px] bg-white w-[100%] h-[398px] max-sm:w-[50%] max-sm:h-[217px] max-sm:p-[8px]">
+              <div class="w-[100%] h-[300px] relative max-sm:w-[151px] max-sm:h-[152px]">
+                <div class="w-[40px] h-[40px] absolute left-0 max-sm:w-[24px] max-sm:h-[24px]">
+                  <img src="assets/svg/like.svg" class="max-sm:w-[24px] max-sm:h-[24px]" alt="">
+                </div>
+                <img src="assets/img/dress2.png" alt="">
+              </div>
+              <div class="w-[100%] h-[50px] flex justify-between max-sm:w-[141px] max-sm:h-[41px] max-sm:flex-col mt-[18px]">
+                <div class="w-[140px] h-[25px] text-[#212121] text-right font-medium leading-normal text-[16px] max-sm:w-[141px] max-sm:h-[19px] max-sm:text-[12px]"><p>بافت سورمه ای</p></div>
+                <div class="w-[110px] h-[50px] max-sm:flex max-sm:flex-row-reverse max-sm:gap-[16px] max-sm:w-full">
+                  <div class="w-[83px] h-[25px] mr-auto text-[#422872] text-right text-[16px] font-bold leading-normal max-sm:text-[12px] max-sm:w-[64px] max-sm:h-[16px]"><p>336,000 <span class="text-[#422872] text-[12px] font-bold leading-normal max-sm:text-[8px]">تومان</span></p></div>
+                  <div class="w-[65px] h-[25px] mr-auto text-[#9e9e9e] text-right text-[12px] font-bold leading-normal line-through max-sm:text-[10px] max-sm:w-[61px] max-sm:h-[22px]">420,000 <span class="text-[10px] max-sm:text-[10px]">تومان</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item p-[16px] bg-white w-[100%] h-[398px] max-sm:w-[50%] max-sm:h-[217px] max-sm:p-[8px]">
+              <div class="w-[100%] h-[300px] relative max-sm:w-[151px] max-sm:h-[152px]">
+                <div class="w-[40px] h-[40px] absolute left-0 max-sm:w-[24px] max-sm:h-[24px]">
+                  <img src="assets/svg/like.svg" class="max-sm:w-[24px] max-sm:h-[24px]" alt="">
+                </div>
+                <img src="assets/img/dress3.png" alt="">
+              </div>
+              <div class="w-[100%] h-[50px] flex justify-between max-sm:w-[141px] max-sm:h-[41px] max-sm:flex-col mt-[18px]">
+                <div class="w-[140px] h-[25px] text-[#212121] text-right font-medium leading-normal text-[16px] max-sm:w-[141px] max-sm:h-[19px] max-sm:text-[12px]"><p>بافت سورمه ای</p></div>
+                <div class="w-[110px] h-[50px] max-sm:flex max-sm:flex-row-reverse max-sm:gap-[16px] max-sm:w-full">
+                  <div class="w-[83px] h-[25px] mr-auto text-[#422872] text-right text-[16px] font-bold leading-normal max-sm:text-[12px] max-sm:w-[64px] max-sm:h-[16px]"><p>336,000 <span class="text-[#422872] text-[12px] font-bold leading-normal max-sm:text-[8px]">تومان</span></p></div>
+                  <div class="w-[65px] h-[25px] mr-auto text-[#9e9e9e] text-right text-[12px] font-bold leading-normal line-through max-sm:text-[10px] max-sm:w-[61px] max-sm:h-[22px]">420,000 <span class="text-[10px] max-sm:text-[10px]">تومان</span></div>
+                </div>
+              </div>
+            </div>
+
+        </div>
+        </div>
+      </section>
+
+      <!-- card banner -->
+      <section class="w-[79%] h-[376px] mt-[104px] grid grid-cols-3 rounded-tr-[55px] rounded-bl-[55px] rounded-tl-[20px] rounded-br-[20px] m-auto max-sm:w-[95%] max-sm:h-[100px] max-sm:mt-[36px]">
+        <div><img src="assets/img/img1.png" alt=""></div>
+        <div><img src="assets/img/img2.png" alt=""></div>
+        <div><img src="assets/img/img3.png" alt=""></div>
+      </section>
+
+      <!-- The most popular brands -->
+      <section class="max-w-[227px] h-[50px] m-auto mt-[74px] text-[#212121] text-center font-black text-[31px] leading-normal max-sm:w-[114px] max-sm:h-[25px] max-sm:mt-[32px] max-sm:text-[16px]"><p>محبوب ترین برند ها</p></section>
+
+
+      <!-- brands item -->
+      <section class="brands-container w-[80%] mt-[58px] m-auto flex flex-wrap justify-center items-center gap-[72px] max-sm:mt-[24px] max-sm:w-[288px] max-sm:gap-[24px]">
+
+        <a href="" class="w-[180px] h-[235px] flex flex-col gap-[18px] justify-center items-center max-sm:w-[80px] max-sm:h-[107px] max-sm:gap-[8px]">
+          <div class="w-[180px] h-[180px] item bg-white rounded-full border-solid border-[4px] border-[#BBB2CD] flex justify-center items-center max-sm:w-[80px] max-sm:h-[80px]"><img class="max-sm:w-[56px] max-sm:h-[24px]" src="assets/img/zara.png" alt=""></div>
+          <div class="w-full h-[37px] text-[#7b7b7b] text-center font-medium text-[24px] leading-normal max-sm:text-[12px] max-sm:h-[19px]"><p>ZARA</p></div>
+        </a>
+
+        <a href="" class="w-[180px] h-[235px] flex flex-col gap-[18px] justify-center items-center max-sm:w-[80px] max-sm:h-[107px] max-sm:gap-[8px]">
+          <div class="w-[180px] h-[180px] item bg-white rounded-full border-solid border-[4px] border-[#BBB2CD] flex justify-center items-center max-sm:w-[80px] max-sm:h-[80px]"><img class="max-sm:w-[48px] max-sm:h-[31px]" src="assets/img/HM.png" alt=""></div>
+          <div class="w-full h-[37px] text-[#7b7b7b] text-center font-medium text-[24px] leading-normal max-sm:text-[12px] max-sm:h-[19px]"><p>H&M</p></div>
+        </a>
+
+        <a href="" class="w-[180px] h-[235px] flex flex-col gap-[18px] justify-center items-center max-sm:w-[80px] max-sm:h-[107px] max-sm:gap-[8px]">
+          <div class="w-[180px] h-[180px] item bg-white rounded-full border-solid border-[4px] border-[#BBB2CD] flex justify-center items-center max-sm:w-[80px] max-sm:h-[80px]"><img class="max-sm:w-[61px] max-sm:h-[35px]" src="assets/img/Pull-Bear-Logo 1.png" alt=""></div>
+          <div class="w-full h-[37px] text-[#7b7b7b] text-center font-medium text-[24px] leading-normal max-sm:text-[12px] max-sm:h-[19px]"><p>PULL & BEAR</p></div>
+        </a>
+
+        <a href="" class="w-[180px] h-[235px] flex flex-col gap-[18px] justify-center items-center max-sm:w-[80px] max-sm:h-[107px] max-sm:gap-[8px]">
+          <div class="w-[180px] h-[180px] item bg-white rounded-full border-solid border-[4px] border-[#BBB2CD] flex justify-center items-center max-sm:w-[80px] max-sm:h-[80px]"><img class="max-sm:w-[48px] max-sm:h-[20px]" src="assets/img/nike.png" alt=""></div>
+          <div class="w-full h-[37px] text-[#7b7b7b] text-center font-medium text-[24px] leading-normal max-sm:text-[12px] max-sm:h-[19px]"><p>NIKE</p></div>
+        </a>
+
+        <a href="" class="w-[180px] h-[235px] flex flex-col gap-[18px] justify-center items-center max-sm:w-[80px] max-sm:h-[107px] max-sm:gap-[8px]">
+          <div class="w-[180px] h-[180px] item bg-white rounded-full border-solid border-[4px] border-[#BBB2CD] flex justify-center items-center max-sm:w-[80px] max-sm:h-[80px]">
+            <div class="w-[42px] h-[62px] absolute text-[#fff] text-center font-bold text-[40px] leading-normal max-sm:text-[16px] max-sm:w-[22px] max-sm:h-[31px]"><p>۴+</p></div>
+            <img class="max-sm:w-[80px] max-sm:h-[80px]" src="assets/img/Ellipse 28.svg" alt="">
+          </div>
+          <div class="w-full h-[37px] text-[#7b7b7b] text-center font-medium text-[24px] leading-normal max-sm:text-[12px] max-sm:h-[19px]"><p>مشاهده ی همه</p></div>
+        </a>
+      </section>
+
+      <!-- card sell -->
+      <section class="max-w-[612px] h-[88px] mt-[106px] rounded-tl-[100px] rounded-tr-[10px] rounded-br-[100px] rounded-bl-[10px] m-auto bg-[#8473a3] pt-[24px] pb-[24px] pr-[56px] pl-[56px] max-sm:w-[294px] max-sm:h-[48px] max-sm:pt-[16px] max-sm:pb-[16px] max-sm:pr-[40px] max-sm:pl-[40px] max-sm:rounded-tr-[6px] max-sm:rounded-bl-[6px] max-sm:mt-[36px]">
+        <a class="flex justify-center items-center gap-[32px] max-sm:gap-[24px]" href="">
+
+          <div class="w-[40px] h-[40px]">
+            <img src="assets/svg/sell.svg" class="max-sm:w-[24px] max-sm:h-[24px]" alt="">
+          </div>
+          <div class="w-[236px] h-[37px] text-center text-[#fff] font-bold text-[24px] leading-normal max-sm:text-[12px]"><p>پرفروش ترین محصولات ماه</p></div>
+          <div class="w-[40px] h-[40px]">
+            <img src="assets/svg/sellbtm.svg" class="max-sm:w-[24px] max-sm:h-[24px]" alt="">
+          </div>
+        </a>
+      </section>
+
+      <!-- product slide 3 -->
+      <section class="max-w-[1520px] h-[367px] bg-[#E4E0EB] mt-[105px] m-auto pt-[24px] max-sm:w-full max-sm:h-[204px] max-sm:pt-[12px] max-sm:pb-[12px] max-sm:pr-[5px] max-sm:mt-[40px]">
+        <div class="w-[85%] h-[48px] m-auto flex justify-between items-center mb-[25px] max-sm:w-[358px] max-sm:h-[19px] max-sm:mb-[12px]">
+          <div class="w-[235px] h-[48px] flex justify-between items-center max-sm:w-[113px] max-sm:h-[19px]">
+            <div class="w-[8px] h-[48px] rounded-tl-[20px] rounded-br-[20px] bg-[#201730] max-sm:w-[3px] max-sm:h-[18px]"></div>
+            <div class="w-[170px] h-[37px] text-[#5B4586] text-center font-black text-[24px] leading-normal max-sm:w-[85px] max-sm:h-[19px] max-sm:text-[12px]"><p>جدید ترین وبلاگ ها</p></div>
+          </div>
+          <a href="" class="w-[50px] h-[37px] text-[#fff] text-center font-bold text-[24px] leading-normal max-sm:w-[25px] max-sm:h-[19px] max-sm:text-[12px]"><p>بیشتر</p></a>
+        </div>
+
+        <div class="w-[92.5%] h-[230px] mr-[7.5%] max-sm:w-[98%] max-sm:h-[149px] max-sm:mr-[2%]">
+          <div id="owlcarousel-product3" class="owl-carousel owl-theme">
+            <div class="item bg-white relative">
+              <div class="w-full h-[40px] rounded-tr-[4px] rounded-tl-[30px] rounded-br-[30px] rounded-bl-[30px] bg-[#6E5B94] pt-[8px] pb-[8px] pr-[10px] pl-[10px] text-[#fff] text-center font-medium text-[20px] leading-normal absolute bottom-0 max-sm:text-[12px]"><p>تاریخچه شلوار جین</p></div>
+              <img src="assets/img/photo1.png" class="w-full h-full" class="" alt="">
+            </div>
+            
+            <div class="item bg-white relative">
+              <div class="w-full h-[40px] rounded-tr-[4px] rounded-tl-[30px] rounded-br-[30px] rounded-bl-[30px] bg-[#6E5B94] pt-[8px] pb-[8px] pr-[10px] pl-[10px] text-[#fff] text-center font-medium text-[20px] leading-normal absolute bottom-0 max-sm:text-[12px]"><p>تاریخچه شلوار جین</p></div>
+              <img src="assets/img/photo 2.png" class="w-full h-full" class="" alt="">
+            </div>
+
+            <div class="item bg-white relative">
+              <div class="w-full h-[40px] rounded-tr-[4px] rounded-tl-[30px] rounded-br-[30px] rounded-bl-[30px] bg-[#6E5B94] pt-[8px] pb-[8px] pr-[10px] pl-[10px] text-[#fff] text-center font-medium text-[20px] leading-normal absolute bottom-0 max-sm:text-[12px]"><p>تاریخچه شلوار جین</p></div>
+              <img src="assets/img/photo 3.png" class="w-full h-full" class="" alt="">
+            </div>
+
+            <div class="item bg-white relative">
+              <div class="w-full h-[40px] rounded-tr-[4px] rounded-tl-[30px] rounded-br-[30px] rounded-bl-[30px] bg-[#6E5B94] pt-[8px] pb-[8px] pr-[10px] pl-[10px] text-[#fff] text-center font-medium text-[20px] leading-normal absolute bottom-0 max-sm:text-[12px]"><p>تاریخچه شلوار جین</p></div>
+              <img src="assets/img/photo1.png" class="w-full h-full" class="" alt="">
+            </div>
+
+            <div class="item bg-white relative">
+              <div class="w-full h-[40px] rounded-tr-[4px] rounded-tl-[30px] rounded-br-[30px] rounded-bl-[30px] bg-[#6E5B94] pt-[8px] pb-[8px] pr-[10px] pl-[10px] text-[#fff] text-center font-medium text-[20px] leading-normal absolute bottom-0 max-sm:text-[12px]"><p>تاریخچه شلوار جین</p></div>
+              <img src="assets/img/photo 2.png" class="w-full h-full" class="" alt="">
+            </div>
+
+            <div class="item bg-white relative">
+              <div class="w-full h-[40px] rounded-tr-[4px] rounded-tl-[30px] rounded-br-[30px] rounded-bl-[30px] bg-[#6E5B94] pt-[8px] pb-[8px] pr-[10px] pl-[10px] text-[#fff] text-center font-medium text-[20px] leading-normal absolute bottom-0 max-sm:text-[12px]"><p>تاریخچه شلوار جین</p></div>
+              <img src="assets/img/photo 2.png" class="w-full h-full" class="" alt="">
+            </div>
+        </div>
+        </div>
+      </section>
+    </main>
+
+
+
+    
+
+
+
+
+    
+
+
+
+    <footer class="w-full h-[910px] bg-white pt-[104px] max-sm:h-[700px] max-sm:pt-[33px]">
+      <section class="w-[85%] flex flex-col gap-[64px] m-auto mb-[102px] max-sm:mb-[31px]">
+        <div class="w-full flex flex-col gap-[24px]">
+          <div id="main" class="w-[95%] flex flex-wrap justify-around items-center max-sm:gap-[50px]">
+            <div class="w-[145px] h-[156px] flex justify-center items-center flex-col max-sm:w-[70px] max-sm:h-[56px]">
+              <img src="assets/svg/footer phone.svg" class="max-sm:w-[33px] max-sm:h-[32px]" alt="">
+              <div class="point-card-title w-[139px] h-[31px] mt-[40px] max-sm:w-[70px] max-sm:h-[16px] max-sm:mt-[8px]"><p>پشتیبانی 24 ساعته</p></div>
+            </div>
+
+            <div class="w-[145px] h-[156px] flex justify-center items-center flex-col max-sm:w-[57px] max-sm:h-[73px]">
+              <img src="assets/svg/footer tic.svg" class="max-sm:w-[60px] max-sm:h-[32px]" alt="">
+              <div class="point-card-title w-[84px] h-[31px] mt-[40px] max-sm:w-[57px] max-sm:h-[32px] max-sm:mt-[9px]"><p>پرداخت امن</p></div></div>
+
+            <div class="w-[145px] h-[156px] flex justify-center items-center flex-col max-sm:w-[59px] max-sm:h-[56px]">
+              <img src="assets/svg/footer fast.svg" alt="">
+              <div class="point-card-title w-[107px] h-[62px] mt-[24px] max-sm:w-[42px] max-sm:h-[16px] max-sm:mt-[8px] max-sm:text-[8px]"><p>ارسال سریع 
+                به سراسر کشور</p></div></div>
+            
+            <div class="w-[145px] h-[156px] flex justify-center items-center flex-col max-sm:w-[40px] max-sm:h-[58px]">
+              <img src="assets/svg/footer origin.svg" class="max-sm:w-[33px] max-sm:h-[32px]" alt="">
+              <div class="point-card-title w-[73px] h-[31px] mt-[40px] max-sm:w-[40px] max-sm:h-[17px] max-sm:mt-[9px]"><p>اصالت کالا</p></div></div>
+            
+            <div class="w-[145px] h-[156px] flex justify-center items-center flex-col max-sm:w-[78px] max-sm:h-[58px]">
+              <img src="assets/svg/footer box.svg" class="max-sm:w-[43px] max-sm:h-[32px]" alt="">
+              <div class="point-card-title w-[141px] h-[31px] mt-[40px] max-sm:w-[78px] max-sm:h-[17px] max-sm:mt-[9px]"><p>ضمانت تعویض کالا</p></div></div>
+          </div>
+        </div>
+
+        <div>
+          <p class="title-fot max-sm:text-[12px]">مدرن فروشگاه شو:</p>
+          <p class="Description-fot max-sm:text-[10px]">با توجه به پیشرفت اینترنت و فضا های مجازی این فرصت فراهم شده است که شما در کمال آرامش در منزل خود از شهر های مختلف خرید کنید. امروزه با توجه به تشکیل سایت های اینترنتی در زمینه های مختلف’ تیم مدرن شو تصمیم گرفت فروشگاه اینترنتی ای با تخصص مد و پوشاک ایجاد کند که در آن حرف اول را امنیت کیفیت و زیبایی میزند. فروشگاه اینترنتی مدرن شواین امکان را به شما میدهد در هر روز و در هر ساعت در هر نقطه از کشورمحصول مورد نظر خود را انتخاب کرده و خریدی مطمئن و دلنشینی را بدون صرف وقت و انژی تجربه کنید.  <a href="" class="Continuation-fot max-sm:text-[10px]">ادامه ی مطلب</a></p>
+        </div>
+      </section>
+
+      <section class="w-[95%] h-[344px] footer-lastCard m-auto pt-[40px] max-sm:pt-0 max-sm:p-[16px] max-sm:h-[214px] relative">
+        <div class="max-w-[1248.81px] h-[139px] m-auto flex max-sm:flex-col max-sm:w-[326px] max-sm:h-[67px] max-sm:mt-[16px]">
+          <div class="w-[115px] h-[109px] ml-[238.5px] max-sm:hidden">
+            <img src="assets/svg/footer markting.svg" alt="">
+          </div>
+          <div class="w-[541px] h-[39px] ml-[179.31px] mt-[100px] flex justify-center items-center gap-[32px] footer-card-item max-sm:w-[326px] max-sm:h-[27px] max-sm:gap-[16px] max-sm:mt-0">
+            <a href="" class="item1 w-[141px] h-[39px] max-sm:w-[73px] max-sm:h-[27px]"><p>درباره ی ما</p></a>
+            <a href="" class="item2 w-[205px] h-[39px] max-sm:w-[141px] max-sm:h-[27px]"><p>پرسش های متداول</p></a>
+            <a href="" class="item3 w-[131px] h-[39px] max-sm:w-[80px] max-sm:h-[27px]"><p>پشتیبانی</p></a>
+          </div>
+          <div class="w-[175px] h-[51px] mt-[29px] grid grid-cols-3 gap-[12px] max-sm:w-[96px] max-sm:h-[24px] max-sm:gap-[12px] max-sm:mt-[16px] max-sm:m-auto">
+            <a href="">
+              <img src="assets/svg/footer telegram.svg" class="max-sm:w-[24px] max-sm:h-[24px]" alt="">
+            </a>
+            <a href="">
+              <img src="assets/svg/footer whatsapp.svg" class="max-sm:w-[24px] max-sm:h-[24px]" alt="">
+            </a>
+            <a href="">
+              <img src="assets/svg/footer instagram.svg" alt="">
+            </a>
+          </div>
+        </div>
+
+        <div class="max-w-[1248px] h-[50px] mt-[79px] m-auto flex justify-between items-center max-sm:w-[240px] max-sm:h-[97.5px] max-sm:mt-[16px] max-sm:flex-col">
+          <div class="w-[50%] h-[50px] footer-card-text max-sm:w-[260px] max-sm:h-[48px] max-sm:text-[10px]">
+            <div>تمامی مطالب عکس ها و محتوای این سایت متعلق به فروشگاه مدرن شو میباشد و هرگونه کپی رایت پیگرد قانونی دارد. <span class="card-befor-title max-sm:text-[10px]">طراحی و اجرا توسط</span> <span class="card-title max-sm:text-[10px]"> تیم اسکانو</span></div>
+          </div>
+          <div class="container-ToUp w-[178px] h-[48px] flex justify-between items-center max-sm:w-[86px] max-sm:h-[28px] max-sm:gap-[8px] max-sm:pt-[4px] max-sm:pl-[8px] max-sm:pb-[4px] max-sm:pr-[8px] max-sm:ml-[-250px] cursor-pointer">
+            <div class="w-[24px] h-[24px] max-sm:w-[12px] max-sm:h-[12px]">
+              <img src="assets/svg/footer toUp.svg" class="max-sm:w-[12px] max-sm:h-[12px]" alt="">
+            </div>
+            <div class="w-[90px] h-[24px] text-[#fff] text-center font-bold text-[16px] leading-normal max-sm:w-[50px] max-sm:h-[16px] max-sm:text-[10px]"><p>بازگشت به بالا</p></div>
+          </div>
+        </div>
+        <div class="sm:hidden w-[44px] h-[31px] absolute bottom-[16px] right-[16px] footer-logo font-bold"><p>logo</p></div>
+      </section>
+    </footer>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script src="assets/carousel/jquery.min.js"></script>
+    <script src="assets/carousel/owl.carousel.min.js"></script>
+</body>
+</html>
