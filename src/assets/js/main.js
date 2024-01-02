@@ -18,12 +18,13 @@ $(document).ready(function () {
 });
 
 
-// main
+// main landing
 
 $(document).ready(function () {
     $("#owl-carousel1").owlCarousel({
         loop:true,
         rtl:true,
+        dots:true,
  
         navigation : true, // Show next and prev buttons
    
@@ -103,4 +104,23 @@ $(document).ready(function () {
     })
 });
 
-// main
+// main landing
+
+
+// main about us
+$(document).ready(function () {
+    $("#aboutUs-owl-carousel").owlCarousel({
+        loop:true,
+        rtl:true,
+        dots:true,
+ 
+        navigation : true, // Show next and prev buttons
+   
+        slideSpeed : 300,
+        paginationSpeed : 400,
+   
+        items : 1,
+   
+    });
+});
+// main about us
